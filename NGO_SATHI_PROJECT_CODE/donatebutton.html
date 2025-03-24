@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Portal</title>
+    <link rel="icon" type="image/x-icon" href="NGO_IMG_LOGO.jpeg">
+    <link rel="stylesheet" href="donatebutton.css">
+</head>
+<body>
+    <main class="container">
+        <h1>NGOsaathi Donation Portal</h1>
+        <p>Your contributions make a real difference. Donate items or submit requests based on your needs.</p>
+
+        <!-- Donate Form -->
+        <section class="form-section">
+            <h2>Donate an Item</h2>
+            <form id="donateForm">
+                <div class="form-group">
+                    <label for="donorName">Donor Name:</label>
+                    <input type="text" id="donorName" name="donorName" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" id="itemName" name="itemName" required placeholder="e.g., Paracetamol, Notebooks">
+                </div>
+                <div class="form-group">
+                    <label for="itemType">Item Type:</label>
+                    <select id="itemType" name="itemType" required>
+                        <option value="medicine">Medicine</option>
+                        <option value="stationery">Stationery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date (for Medicines):</label>
+                    <input type="date" id="expiryDate" name="expiryDate">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+                <button type="submit" class="form-btn">Add Donation</button>
+            </form>
+        </section>
+
+        <!-- Needy Request Form -->
+        <section class="form-section">
+            <h2>Request an Item</h2>
+            <form id="requestForm">
+                <div class="form-group">
+                    <label for="needyName">Your Name:</label>
+                    <input type="text" id="needyName" name="needyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="neededItem">Required Item:</label>
+                    <input type="text" id="neededItem" name="neededItem" required placeholder="e.g., Paracetamol, Notebooks">
+                </div>
+                <div class="form-group">
+                    <label for="neededQuantity">Quantity:</label>
+                    <input type="number" id="neededQuantity" name="neededQuantity" min="1" required>
+                </div>
+                <button type="submit" class="form-btn">Submit Request</button>
+            </form>
+        </section>
+
+        <!-- Display Section -->
+        <section class="display-section">
+            <h2>Available Donations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Type</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Expiry Date</th>
+                    </tr>
+                </thead>
+                <tbody id="donationsList">
+                    <!-- Donations will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        // Capture form submissions and dynamically update the table
+        const donateForm = document.getElementById('donateForm');
+        const donationsList = document.getElementById('donationsList');
+
+        donateForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const donorName = document.getElementById('donorName').value;
+            const itemName = document.getElementById('itemName').value;
+            const itemType = document.getElementById('itemType').value;
+            const expiryDate = document.getElementById('expiryDate').value || 'N/A';
+            const quantity = document.getElementById('quantity').value;
+
+            // Create a new table row
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${itemType}</td>
+                <td>${itemName}</td>
+                <td>${quantity}</td>
+                <td>${expiryDate}</td>
+            `;
+            donationsList.appendChild(row);
+
+            // Reset form
+            donateForm.reset();
+        });
+    </script>
+</body>
+</html>

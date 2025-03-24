@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d4ede6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+}
+
+.contact-box {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 2px solid #ddd;
+}
+
+.left h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.left p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.left i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.right {
+    width: 60%;
+    padding: 20px;
+}
+
+.right h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.right p {
+    font-size:
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block; /* Ensure button is a block element */
+    text-align: center;
+}
+
+button:hover {
+    background: #0056b3;
+}

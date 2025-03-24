@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>NGOsaathi</title>
+    <link rel="stylesheet" href="NGO.css">
+    <link rel="icon" type="image/x-icon" href="NGO_IMG_LOGO.jpeg">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+ integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="NGO_IMG_LOGO.jpeg" alt="NGOsaathi Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="NGO.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="ourwork.html">Our Work</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+
+            </ul>
+        </nav>
+        <button class="donate-btn">
+            <a href="donatebutton.html">  DONATE  </button></a>
+        
+<div class="userlogin">
+ <a href="C:\Users\ASUS\OneDrive\Documents\NGO_SATHI_PROJECT_CODE\login.html" 
+ i class="fa-solid fa-user fa-beat-fade fa-2xl" style="color: #131515;">
+</i></a>
+</div>
+    </header>
+    
+    
+
+
+    
+
+
+     <div class="img_container"> 
+    <div class="slideshow-container">
+        <img src="imgboo.jpg" class="slide active" alt="Image 1">
+        <img src="medicine_img.jpg" class="slide" alt="Image 2">
+    </div>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 2000);
+    </script>
+</div>  
+   
+
+
+    
+    
+        <footer class="footer">
+            <div class="footer-container">
+                
+                
+                <div class="social-icons"> 
+      
+                    <a href="https://www.instagram.com/" target="_blank" class="icon">
+                        <i class="fa-brands fa-instagram fa-2xl" style="color: #f0f5ff;"></i>                    <a href="https://www.linkedin.com/" target="_blank" class="icon">
+                        <i class="fa-brands fa-linkedin fa-2xl" style="color: #ebebf5;"></i></a>                
+                            <a href="https://github.com/" target="_blank" class="icon">
+                            <i class="fa-brands fa-github fa-2xl" style="color: #f8f1f1;"></i>
+                    </a>
+                    <a href="mailto:your-email@example.com" class="icon">
+                        <i class="fa-regular fa-envelope fa-2xl" style="color: #ebe3e3;"></i></a>
+                </div>
+                <nav class="footer-nav">
+                    <a href="NGO.html" class="links">Home</a>
+                    <a href="aboutus.html" class="links">About</a>
+                   
+                    <a href="contactus.html" class="links">Contact</a>
+                </nav>
+
+                
+                <p class="footer-text">@2025 Your Name | All Rights <abbr title="Ayesha and Alfiya"> Reserved</abbr> </p>
+            </div>
+        </footer>
+    
+</body>
+</html>
